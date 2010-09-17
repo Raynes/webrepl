@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+  <head>
+    <title>Clojure Web REPL</title>
+  </head>
+  <body>
+    <div style="height: 400px; width: 600px; margin: 50px auto auto auto;">
+      <div style="padding-bottom: 5px;">
+        <applet archive="webrepl-0.0.1-SNAPSHOT-standalone.jar" code="webrepl/core.class" width="600" height="400"></applet>
+      </div>
+      <p>This is a Clojure REPL applet written by <a href="http://github.com/Raynes">Anthony Simpson</a>
+        using Beanshell's JConsole Swing component.</p>
+      <p>Chances are, you'll get a weird permission error when this applet tries to run. The only way
+        that I know how to fix this right now is to put this in ~/.java.policy:</p>
+      <pre>grant {
+  permission java.security.AllPermission;
+};</pre>
+      <p>This is likely unsafe to have around <i>all</i> the time, but for the purposes of a web REPL,
+        I suppose it's reasonable. If anybody else knows how to fix it without granting such daunting
+        permissions, feel free to contact me via email or github (linked above).
+      </p>
+      <p>Also, if you haven't noticed already, this REPL is absolutely <b>not</b> sandboxed, so don't be silly.
+        It's your machine you'll screw up, not mine. :p</p>
+      <p>Find more information at this project's <a href="http://github.com/Raynes/webrepl">Github page</a>.
+      </p>
+    </div>
+  </body>
+</html>
